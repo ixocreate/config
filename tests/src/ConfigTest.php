@@ -9,8 +9,9 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\Config;
+namespace KiwiSuiteTest\Config;
 
+use KiwiSuite\Config\Config;
 use PHPUnit\Framework\TestCase;
 
 class ConfigTest extends TestCase
