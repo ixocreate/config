@@ -32,15 +32,15 @@ final class ConfigBootstrap implements BootstrapInterface
 
     /**
      * @param ApplicationConfig $applicationConfig
-     * @param BootstrapRegistry $bootstrapCollection
+     * @param BootstrapRegistry $bootstrapRegistry
      */
-    public function bootstrap(ApplicationConfig $applicationConfig, BootstrapRegistry $bootstrapCollection): void
+    public function bootstrap(ApplicationConfig $applicationConfig, BootstrapRegistry $bootstrapRegistry): void
     {
         $mergedConfig = [];
         $configDirectories = [
             $applicationConfig->getConfigDirectory(),
         ];
-        foreach ($bootstrapCollection->getModules() as $module) {
+        foreach ($bootstrapRegistry->getModules() as $module) {
             $configDirectories[] = $module->getConfigDirectory();
         }
         $configDirectories[] = $applicationConfig->getConfigDirectory() . 'local/';
@@ -58,6 +58,6 @@ final class ConfigBootstrap implements BootstrapInterface
                 $mergedConfig = ArrayUtils::merge($mergedConfig, $data);
             }
         }
-        $bootstrapCollection->addService(Config::class, new Config($mergedConfig));
+        $bootstrapRegistry->addService(Config::class, new Config($mergedConfig));
     }
 }
