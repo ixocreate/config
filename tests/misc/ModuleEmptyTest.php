@@ -14,7 +14,7 @@ namespace KiwiSuiteMisc\Config;
 use KiwiSuite\Application\Module\ModuleInterface;
 use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
 
-class ModuleTest implements ModuleInterface
+class ModuleEmptyTest implements ModuleInterface
 {
 
     /**
@@ -29,10 +29,6 @@ class ModuleTest implements ModuleInterface
      */
     public function getDefaultConfig(): ?array
     {
-        return [
-            'somekey' => [
-               'key1' => 'key1value',
-            ]
-        ];
+        return null;
     }
 }

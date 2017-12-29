@@ -11,10 +11,10 @@
 declare(strict_types=1);
 namespace KiwiSuiteMisc\Config;
 
-use KiwiSuite\Application\Module\ModuleInterface;
+use KiwiSuite\Application\Bundle\BundleInterface;
 use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
 
-class ModuleTest implements ModuleInterface
+class BundleTest implements BundleInterface
 {
 
     /**
@@ -25,14 +25,18 @@ class ModuleTest implements ModuleInterface
     }
 
     /**
-     * @return array|null
+     * @return string
      */
-    public function getDefaultConfig(): ?array
+    public function getConfigDirectory(): string
     {
-        return [
-            'somekey' => [
-               'key1' => 'key1value',
-            ]
-        ];
+        return "test";
+    }
+
+    /**
+     * @return string
+     */
+    public function getBootstrapDirectory(): string
+    {
+        return "";
     }
 }
