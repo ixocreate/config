@@ -37,11 +37,18 @@ final class ConfigBootstrap implements BootstrapInterface
     public function bootstrap(ApplicationConfig $applicationConfig, BootstrapRegistry $bootstrapRegistry): void
     {
         $mergedConfig = [];
+        foreach ($applicationConfig->getModules() as $module) {
+            if (empty($module->getDefaultConfig())) {
+                continue;
+            }
+            $mergedConfig = ArrayUtils::merge($mergedConfig, $module->getDefaultConfig());
+        }
+
         $configDirectories = [
             $applicationConfig->getConfigDirectory(),
         ];
-        foreach ($bootstrapRegistry->getModules() as $module) {
-            $configDirectories[] = $module->getConfigDirectory();
+        foreach ($applicationConfig->getBundles() as $bundle) {
+            $configDirectories[] = $bundle->getConfigDirectory();
         }
         $configDirectories[] = $applicationConfig->getConfigDirectory() . 'local/';
         foreach ($configDirectories as $directory) {

@@ -15,6 +15,8 @@ use KiwiSuite\Application\ApplicationConfig;
 use KiwiSuite\Application\Bootstrap\BootstrapRegistry;
 use KiwiSuite\Config\Bootstrap\ConfigBootstrap;
 use KiwiSuite\Config\Config;
+use KiwiSuiteMisc\Config\BundleTest;
+use KiwiSuiteMisc\Config\ModuleEmptyTest;
 use KiwiSuiteMisc\Config\ModuleTest;
 use PHPUnit\Framework\TestCase;
 
@@ -30,7 +32,12 @@ class ConfigBootstrapTest extends TestCase
         $this->applicationConfig = new ApplicationConfig(
             true,
             __DIR__ . '/../../config',
-            __DIR__ . '/../../bootstrap'
+            __DIR__ . '/../../bootstrap',
+            null,
+            null,
+            null,
+            [ModuleTest::class, ModuleEmptyTest::class],
+            [BundleTest::class]
         );
     }
 
@@ -51,6 +58,7 @@ class ConfigBootstrapTest extends TestCase
         $this->assertSame("mynewpass", $config->get("db.pass"));
         $this->assertSame("myuser", $config->get("db.user"));
         $this->assertSame("myhost", $config->get("db.host"));
+        $this->assertSame("key1value", $config->get("somekey.key1"));
     }
 
     public function testMissingDirectory()
@@ -62,7 +70,8 @@ class ConfigBootstrapTest extends TestCase
             null,
             null,
             null,
-            [ModuleTest::class]
+            [ModuleTest::class, ModuleEmptyTest::class],
+            [BundleTest::class]
         );
 
         $bootstrapRegistry = new BootstrapRegistry($applicationConfig->getModules());
@@ -75,6 +84,9 @@ class ConfigBootstrapTest extends TestCase
         /** @var Config $config */
         $config = $bootstrapRegistry->getService(Config::class);
         $this->assertSame([
+            'somekey' => [
+                'key1' => 'key1value',
+            ],
             'db' => [
                 'user' => "myuser",
                 'host' => "myhost",
