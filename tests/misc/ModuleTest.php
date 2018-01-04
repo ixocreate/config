@@ -4,7 +4,7 @@
  *
  * @package kiwi-suite/config
  * @see https://github.com/kiwi-suite/config
- * @copyright Copyright (c) 2010 - 2017 kiwi suite GmbH
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
  * @license MIT License
  */
 
@@ -32,7 +32,7 @@ class ModuleTest implements ModuleInterface
         return [
             'somekey' => [
                'key1' => 'key1value',
-            ]
+            ],
         ];
     }
 }
