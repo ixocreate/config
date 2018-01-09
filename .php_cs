@@ -4,7 +4,7 @@ kiwi-suite/config (https://github.com/kiwi-suite/config)
 
 @package kiwi-suite/config
 @link https://github.com/kiwi-suite/config
-@copyright Copyright (c) 2010 - 2017 kiwi suite GmbH
+@copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
 @license MIT License
 EOF;
 return PhpCsFixer\Config::create()

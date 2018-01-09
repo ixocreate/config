@@ -4,14 +4,14 @@
  *
  * @package kiwi-suite/config
  * @see https://github.com/kiwi-suite/config
- * @copyright Copyright (c) 2010 - 2017 kiwi suite GmbH
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
  * @license MIT License
  */
 
 declare(strict_types=1);
 namespace KiwiSuite\Config;
 
-final class Config
+final class Config implements \Serializable
 {
     /**
      * @var array
@@ -76,5 +76,21 @@ final class Config
         }
 
         return $config;
+    }
+
+    /**
+     * @return string
+     */
+    public function serialize()
+    {
+        return \serialize($this->config);
+    }
+
+    /**
+     * @param string $serialized
+     */
+    public function unserialize($serialized)
+    {
+        $this->config = \unserialize($serialized);
     }
 }
