@@ -11,7 +11,7 @@
 declare(strict_types=1);
 namespace KiwiSuite\Config;
 
-final class Config
+final class Config implements \Serializable
 {
     /**
      * @var array
@@ -76,5 +76,21 @@ final class Config
         }
 
         return $config;
+    }
+
+    /**
+     * @return string
+     */
+    public function serialize()
+    {
+        return \serialize($this->config);
+    }
+
+    /**
+     * @param string $serialized
+     */
+    public function unserialize($serialized)
+    {
+        $this->config = \unserialize($serialized);
     }
 }
