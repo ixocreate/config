@@ -5,7 +5,7 @@
 kiwi-suite/config is a php array config parser/accessor
 
 [![Build Status](https://travis-ci.org/kiwi-suite/config.svg?branch=master)](https://travis-ci.org/kiwi-suite/config)
-[![Coverage Status](https://coveralls.io/repos/github/kiwi-suite/config/badge.svg?branch=develop)](https://coveralls.io/github/kiwi-suite/config?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/kiwi-suite/config/badge.svg?branch=master)](https://coveralls.io/github/kiwi-suite/config?branch=master)
 [![Packagist](https://img.shields.io/packagist/v/kiwi-suite/config.svg)](https://packagist.org/packages/kiwi-suite/config)
 [![Packagist Pre Release](https://img.shields.io/packagist/vpre/kiwi-suite/config.svg)](https://packagist.org/packages/kiwi-suite/config)
 [![Packagist](https://img.shields.io/packagist/l/kiwi-suite/config.svg)](https://packagist.org/packages/kiwi-suite/config)
