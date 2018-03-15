@@ -11,7 +11,9 @@
 declare(strict_types=1);
 namespace KiwiSuite\Config;
 
-final class Config implements \Serializable
+use KiwiSuite\Contract\Application\SerializableServiceInterface;
+
+final class Config implements SerializableServiceInterface
 {
     /**
      * @var array
