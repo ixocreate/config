@@ -16,7 +16,7 @@ Install the package via composer:
 composer require ixocreate/config
 ```
 
-### Example
+### Usage
 
 ```php
 $config = new Config([
