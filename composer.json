@@ -7,12 +7,12 @@
         "name": "IXOCREATE"
     }],
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "ixocreate/contract": "dev-develop"
     },
     "require-dev": {
+        "ixocreate/coding-standard": "^1.0",
         "phpunit/phpunit": "^6.0.6",
-        "ixocreate/contract": "dev-develop",
-        "friendsofphp/php-cs-fixer": "^2.5",
         "php-coveralls/php-coveralls": "^2.0",
         "zendframework/zend-stdlib": "^3.1"
     },

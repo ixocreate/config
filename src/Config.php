@@ -1,14 +1,12 @@
 <?php
 /**
- * kiwi-suite/config (https://github.com/kiwi-suite/config)
- *
- * @package kiwi-suite/config
- * @see https://github.com/kiwi-suite/config
- * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
  * @license MIT License
  */
 
 declare(strict_types=1);
+
 namespace Ixocreate\Config;
 
 use Ixocreate\Contract\Application\SerializableServiceInterface;
