@@ -9,9 +9,9 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\Config;
+namespace Ixocreate\Config;
 
-use KiwiSuite\Contract\Application\SerializableServiceInterface;
+use Ixocreate\Contract\Application\SerializableServiceInterface;
 
 final class Config implements SerializableServiceInterface
 {
