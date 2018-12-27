@@ -1,31 +1,35 @@
 {
-    "name": "kiwi-suite/config",
-    "description": "kiwi-suite/config",
+    "name": "ixocreate/config",
+    "description": "Config Class for IXOCREATE",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Thomas Payer"
+            "name": "IXOCREATE"
         }
     ],
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "ixocreate/contract": "dev-develop"
     },
     "require-dev": {
+        "ixocreate/coding-standard": "^1.0",
         "phpunit/phpunit": "^6.0.6",
-        "friendsofphp/php-cs-fixer": "^2.5",
         "php-coveralls/php-coveralls": "^2.0",
         "zendframework/zend-stdlib": "^3.1"
     },
     "autoload": {
         "psr-4": {
-            "KiwiSuite\\Config\\": "src/"
+            "Ixocreate\\Config\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "KiwiSuiteMisc\\Config\\": "tests/misc/",
-            "KiwiSuiteTest\\Config\\": "tests/src/"
+            "IxocreateMisc\\Config\\": "tests/misc/",
+            "IxocreateTest\\Config\\": "tests/src/"
         }
+    },
+    "scripts": {
+        "fix-cs": "vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --config vendor/ixocreate/coding-standard/.php_cs"
     }
 }

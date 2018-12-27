@@ -1,17 +1,15 @@
 <?php
 /**
- * kiwi-suite/config (https://github.com/kiwi-suite/config)
- *
- * @package kiwi-suite/config
- * @see https://github.com/kiwi-suite/config
- * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
  * @license MIT License
  */
 
 declare(strict_types=1);
-namespace KiwiSuiteTest\Config;
 
-use KiwiSuite\Config\Config;
+namespace IxocreateTest\Config;
+
+use Ixocreate\Config\Config;
 use PHPUnit\Framework\TestCase;
 
 class ConfigTest extends TestCase
