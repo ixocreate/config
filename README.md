@@ -10,6 +10,8 @@ ixocreate/config is a php array config parser/accessor
 [![Packagist Pre Release](https://img.shields.io/packagist/vpre/ixocreate/config.svg)](https://packagist.org/packages/ixocreate/config)
 [![Packagist](https://img.shields.io/packagist/l/ixocreate/config.svg)](https://packagist.org/packages/ixocreate/config)
 
+## Installation
+
 Install the package via composer:
 
 ```sh
